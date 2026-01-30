@@ -1,0 +1,302 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage[empty]{fullpage}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+    \textbf{\Huge \scshape Richard Antony Cruz Rojas} \\ \vspace{3pt}
+    \small
+    \faMobile \hspace{.5pt} \href{tel:51931062761}{+51 931 062 761}
+    $|$
+    \faAt \hspace{.5pt} \href{mailto:cruz.rojas.ra@gmail.com}{cruz.rojas.ra@gmail.com}
+    $|$
+    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/richard-antony-cruz-rojas/}{LinkedIn}
+    $|$
+    \faGithub \hspace{.5pt} \href{https://github.com/ricktonycr}{GitHub}
+    $|$
+    %\faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
+    %$|$
+    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Arequipa/@-16.4040524,-71.5390115,14z/data=!3m1!4b1!4m6!3m5!1s0x91424a487785b9b3:0xa3c4a612b9942036!8m2!3d-16.4090474!4d-71.537451!16zL20vMDFweTg3?entry=ttu}{Arequipa, Perú}
+\end{center}
+
+
+
+%----------- SKILLS -----------
+
+\section{Skills}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Idiomas hablados:}{Español (avanzado), Inglés (intermedio)} \\ \vspace{3pt}
+        \textbf{Lenguajes:}{ Java, Genexus, Javascript, Typescript, SQL, Bash, C/C++, Python, Go, C\#} \\ \vspace{3pt}
+        \textbf{Tecnologías:}{ Git, Maven, Spring Framework, Tomcat, Postman, Soap UI, ANTLR, Jenkins, Node.js, React.js, MySQL, MongoDB, Docker, Podman, GTK, AWS, GCP, OpenCV, PyTorch, TensorFlow, WebRTC, WebGL, Trhee.js, OpenGL.} \\ \vspace{3pt}
+        \textbf{Metodologías:}{ Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+
+%----------- EXPERIENCE -----------
+
+\section{Experiencia}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+
+
+    \resumeSubheading
+		{Banco Alfin}{Lima, Perú}
+		{Especialista de Core Bancario}{Enero 2025 \textbf{--} Actualidad, Full-time, Remoto}
+		\resumeItemListStart
+		\resumeItem{Desarrollo de reportes de cronogramas para flujos de créditos y reportes de garantías asociadas a los mismos, de acuerdo a los productos activos en el sistema bancario.}
+		\resumeItem{Mantenimiento y creación del módulo independiente de líneas revolventes para personas jurídicas. Realizando la creación, bloqueo, cancelación por vencimiento y cancelación manual de líneas además de la generación de créditos a partir del saldo de la línea.}
+		\resumeItem{Mejora de la generación de cronogramas personalizado de la institución, agregando funcionalidades como Cuota Balloon, Periodo de gracia, sistema de amortización Francés y Alemán.}
+		\resumeItemListEnd
+		
+    \resumeSubheading
+		{SES}{Lima, Perú}
+		{Ingeniero de Software}{Enero 2024 \textbf{--} Diciembre 2024, Full-time, Remoto}
+		\resumeItemListStart
+		\resumeItem{Desarrollo de servicios internos y paneles para la implementación de flujo de pago de servicios externos consumiendo una API interna en Genexus 8 y Java.}
+		\resumeItem{Desarrollo y mantenimiento de proyectos para el consumo de servicios externos y publicación de microservicios internos utilizando Spring en Java y despliegue con Jenkins.}
+		\resumeItemListEnd
+
+
+	\resumeSubheading
+		{Bantotal}{Arequipa, Perú}
+		{Analista programador}{Marzo 2018 \textbf{--} Diciembre 2023, Full-time}
+		\resumeItemListStart
+		\resumeItem{Análisis y desarrollo de soluciones bancarias para clientes como FORUM(Chile), Compartamos(Perú), Efectiva(Perú), Banco Mundo Mujer(Colombia), BROU(Uruguay) en temas como créditos personales, créditos grupales, cheques, cuentas de ahorro y procesos de cadena de analizar el cdigo genexuse. Usando Genexus 8, Genexus 9, SQL, Java y C\#.}
+		\resumeItem{Diseño y desarrollo de software para la generacón automática de documentación en el formato institucional(.docx) a partir de archivos en formato XPZ(Archivo de distribución de programas en Genexus) en Golang y usando  \href{https://www.antlr.org/}{ANTLR} para analizar el código genexus.}
+		\resumeItem{Desarrollo y optimización base de los módulos de calendario, reglas de negocios(ejecución en interfaz de alto nivel de procesos bancarios), ejecución y distribución de hilos para procesos batch de la versión preliminar de Bantotal 4 usando Genexus 16 y Java.}
+		\resumeItem{Diseño y desarrollo de un módulo de procesamiento de texto en formato parametrizable para el procesamiento por lotes de cuentas, saldos, etc. en la comunicación interbancaria utilizando \href{https://www.antlr.org/}{ANTLR} en Java.}
+		\resumeItem{Diseño y desarrollo de un plugin para Genexus 16 para el análisis por lotes de programas en una Knowledge Base(Agrupación de programas y tablas con una lógica de negocio en común) y la generación de documentación de estos programas en una instalación \href{https://js.wiki/}{Wiki.js} independiente.}
+		\resumeItemListEnd
+
+    \resumeSubheading
+      {Centro de Investigación CITESOFT}{Arequipa, Perú}
+      {Asistente de Investigación}{Julio 2016 \textbf{--} Marzo 2018, Part-time}
+        \resumeItemListStart
+            \resumeItem{Estudio e implementación de algoritmos para la segmentación y clasificación de imágenes médicas, tales como SSM, Random Forest, Wavelets y KNN.}
+            \resumeItem{Diseño e implementación de software interactivo para la generación de un Gold Standard dirigido a la segmentación de imágenes médicas en Java.}
+            \resumeItem{Diseño e implementación de software en línea de comandos para la clasificación de imágenes médicas en formato DICOM(radiografías) de acuerdo a la zona del cuerpo en C++.}
+        \resumeItemListEnd
+
+        
+
+          \resumeSubheading
+      {Red Social Universitaria Uconecta}{Arequipa, Perú}
+      {Practicante Ingeniería de Sistemas / Programador}{Marzo 2013 \textbf{--} Marzo 2015, Part-time}
+      \resumeItemListStart
+      \resumeItem{Se hizo un análisis de la interfaz de la página, proponiendo cambios especficos siguiendo lineamientos de usabilidad, diseño y experiencia de usuario. Se implementó la propuesta utilizando CSS, HTML y PHP, según los lineamientos del framework Drupal.}
+      \resumeItem{Se investigó y usó el framework Drupal para el desarrollo de módulos de interacción entre usuarios, tales como reacciones y comentarios en posts para la red social. Se desarrollo el módulo de comunicación con el API de Facebook.com para la autenticación y compartir la página de la red social entre sus amigos de Facebook.}
+      \resumeItemListEnd  
+     
+    
+  \resumeSubHeadingListEnd
+
+
+
+%----------- AWARDS & ACHIEVEMENTS -----------
+
+\section{Premios \& Logros}
+  \vspace{2pt}
+  \resumeSubHeadingListStart
+    \small{\item{
+        \textbf{Uconecta:}{ Equipo ganador con Uconecta en la competencia “Emprendedores Innovadores” de Innóvate Perú, StartUp Perú (2015).} \\ \vspace{3pt}
+        \textbf{Quinty:}{ Equipo ganador con Qinty(juego turístico) en la competencia “Hackaton Arequipa” desarrollado en la Incubadora de Negocios KAMAN (2018).} \\ \vspace{3pt}
+        \textbf{Gold Standard Maker:}{ Obtención de Derechos de Autor sobre el aplicativo “Gold Standard Maker (GSM)” (2018).} \\ \vspace{3pt}
+        \textbf{Bantotal document:}{ Tercer lugar en la competencia "Hackaton Bantotal" con el aplicativo Bantotal Document para la documentación automática de programas escritos en Genexus.} \\ \vspace{3pt}
+    }}
+  \resumeSubHeadingListEnd
+  
+  
+  
+  
+  %----------- EDUCATION -----------
+  
+  \section{Educación}
+  \vspace{3pt}
+  \resumeSubHeadingListStart
+  \resumeEducationHeading
+  {Universidad Nacional de San Agustín}{Arequipa, Perú}
+  {Ingeniería de Sistemas;  \textbf{Quinto superior} \textbf{GPA: 14.52/20.00}}{Marzo 2013 \textbf{--} Diciembre 2018}
+  {}{}
+  \resumeSubHeadingListEnd
+  
+  
+
+\iffalse % LONG COMMENT
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+    \vspace{3pt}
+    \resumeSubHeadingListStart
+      
+      \resumeProjectHeading
+        {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch and recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move. Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
+          \resumeItemListEnd
+      
+      \resumeProjectHeading
+        {\textbf{DS\&A Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
+          \resumeItemListStart
+            \resumeItem{Five Java projects that apply DS\&A concepts such as discrete-event simulation using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree, Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
+          \resumeItemListEnd
+      
+    \resumeSubHeadingListEnd
+
+\fi
+
+
+%----------- CERTIFICATES -----------
+
+% \section{Certificates}
+  % \resumeSubHeadingListStart
+    
+    % \resumeOrganizationHeading
+      % {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Project Management and Personal Productivity}
+    
+  % \resumeSubHeadingListEnd
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}
