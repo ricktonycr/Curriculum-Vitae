@@ -1,31 +1,50 @@
-# arasgungore-CV
+# Curriculum Vitae - Richard Antony Cruz Rojas
 
-My curriculum vitae (CV) written using LaTeX. In my CV, you may find my contact information, websites, education, experience, achievements, projects, and skills.
+Curriculum Vitae (CV) desarrollado en LaTeX, optimizado para sistemas de seguimiento de candidatos (ATS) y maquetado en una sola página de alto impacto.
 
-Please find attached my [CV](https://drive.google.com/file/d/1TGwMpZl6FDeQk1w_-EetbspCuzu16kCF/view?usp=sharing). 😜
+📄 **[Descargar CV en PDF](./RichardCruz_CV.pdf)**
 
+## Uso con Makefile (Recomendado)
 
-
-## Run on Terminal
+El proyecto incluye un `Makefile` que detecta automáticamente si tienes `pdflatex` instalado localmente o utiliza contenedores (`podman` / `docker`):
 
 ```sh
-pdflatex main.tex
+# Compilar PDF, actualizar vista previa PNG y limpiar archivos temporales
+make
+
+# Solo compilar el PDF
+make build
+
+# Actualizar imagen de vista previa (png/cv-0.png)
+make preview
+
+# Limpiar archivos temporales (.aux, .log, .out)
+make clean
 ```
 
+## Compilación Manual en Terminal
 
+### Con TeX Live local:
+```sh
+pdflatex RichardCruz_CV.tex
+```
 
-## Screenshots
+### Con Podman / Docker:
+```sh
+podman run --rm -v $(pwd):/workdir:Z -w /workdir ghcr.io/xu-cheng/texlive-full pdflatex RichardCruz_CV.tex
+```
+
+## Vista Previa
 
 <p align="center">
-    <img alt="Screenshot" src="https://raw.githubusercontent.com/ricktonycr/Curriculum-Vitae/spanish/png/cv-0.png" width="400">
-    <img alt="Screenshot" src="https://raw.githubusercontent.com/ricktonycr/Curriculum-Vitae/spanish/png/cv-1.png" width="400">
+    <a href="./RichardCruz_CV.pdf">
+        <img alt="CV Richard Cruz" src="png/cv-0.png" width="550">
+    </a>
 </p>
 
+## Autor
 
+👤 **Richard Antony Cruz Rojas**
 
-## Author
-
-👤 **Richard Cruz**
-
-* LinkedIn: [@arasgungore](https://www.linkedin.com/in/arasgungore)
-* GitHub: [@arasgungore](https://github.com/arasgungore)
+* **LinkedIn:** [richard-antony-cruz-rojas](https://www.linkedin.com/in/richard-antony-cruz-rojas/)
+* **GitHub:** [@ricktonycr](https://github.com/ricktonycr)

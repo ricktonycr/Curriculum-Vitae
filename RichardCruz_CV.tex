@@ -1,53 +1,53 @@
 %-------------------------
 % Resume in Latex
-% Author : Aras Gungore
+% Author : Richard Antony Cruz Rojas
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{hyphenat}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\usepackage{charter}
+\usepackage[margin=0.40in, top=0.34in, bottom=0.34in]{geometry}
 \input{glyphtounicode}
 
+% Ensure generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
 
-%---------- FONT OPTIONS ----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+% Palette definition
+\definecolor{primary}{HTML}{1A365D}    % Deep Navy Blue
+\definecolor{linkcolor}{HTML}{2B6CB0}  % Slate Blue for links
+\definecolor{darktext}{HTML}{1A202C}   % Soft dark text
 
-% serif
-% \usepackage{CormorantGaramond}
-\usepackage[empty]{fullpage}
-% \usepackage{charter}
-
+% PDF metadata for ATS and PDF readers
+\hypersetup{
+    pdftitle={CV - Richard Antony Cruz Rojas},
+    pdfauthor={Richard Antony Cruz Rojas},
+    pdfsubject={Curriculum Vitae - Especialista en Core Bancario e Ingeniero de Software},
+    pdfkeywords={Ingeniero de Software, Core Bancario, Bantotal, Java, GeneXus, Go, Spring Boot, ANTLR, Microservicios, Procesamiento Batch},
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor,
+    citecolor=linkcolor
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
 
 \raggedbottom
@@ -56,247 +56,143 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-6pt}\scshape\raggedright\large\color{primary}
+}{}{0em}{}[\color{primary}\titlerule \vspace{-4pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
-
-%-------------------------
 % Custom commands
-
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-1.5pt}}
   }
 }
 
-
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+  \vspace{-3pt}\item
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4.5pt}
 }
-
-
-\newcommand{\resumeSubSubheading}[2]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeEducationHeading}[6]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-      \textit{\small#5} & \textit{\small #6} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-
-\newcommand{\resumeProjectHeading}[2]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-
-\newcommand{\resumeOrganizationHeading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textit{\small #2} \\
-      \textit{\small#3}
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=0.8pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\newcommand{\sep}{\hspace{4.5pt}\textcolor{linkcolor}{\small\textbf{|}}\hspace{4.5pt}}
 
 %-------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %---------- HEADING ----------
 
 \begin{center}
-    \textbf{\Huge \scshape Richard Antony Cruz Rojas} \\ \vspace{3pt}
+    {\Huge \scshape \textbf{\color{primary} Richard Antony Cruz Rojas}} \\ \vspace{1.5pt}
+    {\small \textbf{Especialista en Core Bancario \& Ingeniero de Software Senior}} \\ \vspace{2.5pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:51931062761}{+51 931 062 761}
-    $|$
-    \faAt \hspace{.5pt} \href{mailto:cruz.rojas.ra@gmail.com}{cruz.rojas.ra@gmail.com}
-    $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/richard-antony-cruz-rojas/}{LinkedIn}
-    $|$
-    \faGithub \hspace{.5pt} \href{https://github.com/ricktonycr}{GitHub}
-    $|$
-    %\faGlobe \hspace{.5pt} \href{https://arasgungore.github.io}{Portfolio}
-    %$|$
-    \faMapMarker \hspace{.5pt} \href{https://www.google.com/maps/place/Arequipa/@-16.4040524,-71.5390115,14z/data=!3m1!4b1!4m6!3m5!1s0x91424a487785b9b3:0xa3c4a612b9942036!8m2!3d-16.4090474!4d-71.537451!16zL20vMDFweTg3?entry=ttu}{Arequipa, Perú}
+    \faPhone*\hspace{2pt}\href{tel:+51931062761}{+51 931 062 761}\sep
+    \faEnvelope\hspace{2pt}\href{mailto:cruz.rojas.ra@gmail.com}{cruz.rojas.ra@gmail.com}\sep
+    \faLinkedin\hspace{2pt}\href{https://www.linkedin.com/in/richard-antony-cruz-rojas/}{richard-antony-cruz-rojas}\sep
+    \faGithub\hspace{2pt}\href{https://github.com/ricktonycr}{ricktonycr}\sep
+    \faMapMarker*\hspace{2pt}Arequipa, Perú
 \end{center}
 
+%----------- PROFILE -----------
 
+\section{Perfil Profesional}
+  \vspace{0.5pt}
+  \small{
+    Ingeniero de Software con más de 7 años de experiencia especializado en Core Bancario (Bantotal), arquitectura financiera y procesamiento batch de alto rendimiento. Sólida trayectoria implementando soluciones escalables en Java, Go, Spring y GeneXus para entidades bancarias internacionales en Perú, Chile, Colombia y Uruguay. Especialista en optimización de rendimiento, diseño de parsers/compiladores con ANTLR, modernización de sistemas legados y CI/CD.
+  }
+  \vspace{1pt}
 
 %----------- SKILLS -----------
 
-\section{Skills}
-  \vspace{2pt}
+\section{Habilidades Técnicas}
+  \vspace{0.5pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Idiomas hablados:}{Español (avanzado), Inglés (intermedio)} \\ \vspace{3pt}
-        \textbf{Lenguajes:}{ Java, Genexus, Javascript, Typescript, SQL, Bash, C/C++, Python, Go, C\#} \\ \vspace{3pt}
-        \textbf{Tecnologías:}{ Git, Maven, Spring Framework, Tomcat, Postman, Soap UI, ANTLR, Jenkins, Node.js, React.js, MySQL, MongoDB, Docker, Podman, GTK, AWS, GCP, OpenCV, PyTorch, TensorFlow, WebRTC, WebGL, Trhee.js, OpenGL.} \\ \vspace{3pt}
-        \textbf{Metodologías:}{ Agile, Scrum, OOP, Functional Programming, DevOps, CI/CD, TDD} \\ \vspace{3pt}
+        \textbf{Core Bancario \& Backend:} Bantotal, Spring Boot / Framework, ANTLR, APIs REST/SOAP, Procesamiento Batch, Multithreading, Tomcat \\ \vspace{1.2pt}
+        \textbf{Lenguajes:} Java, Go (Golang), GeneXus (8/9/16), Python, C/C++, C\#, SQL, Bash, JavaScript, TypeScript \\ \vspace{1.2pt}
+        \textbf{DevOps, Cloud \& Bases de Datos:} Docker, Podman, Jenkins, CI/CD, Git, MySQL, MongoDB, AWS, GCP, Linux \\ \vspace{1.2pt}
+        \textbf{Metodologías \& Idiomas:} Microservicios, TDD, Agile/Scrum, Programación Funcional, POO \hspace{2pt}\textbar\hspace{2pt} Español (nativo), Inglés (intermedio/B2)
     }}
   \resumeSubHeadingListEnd
 
 %----------- EXPERIENCE -----------
 
-\section{Experiencia}
-  \vspace{3pt}
+\section{Experiencia Laboral}
+  \vspace{0.5pt}
   \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {Banco Alfin}{Lima, Perú (Remoto)}
+      {Especialista de Core Bancario}{Enero 2025 -- Actualidad}
+      \resumeItemListStart
+        \resumeItem{Diseño y desarrollo de reportes de cronogramas y garantías crediticias de la cartera activa del core bancario, garantizando consistencia financiera y cumplimiento normativo de auditoría interna y SBS.}
+        \resumeItem{Desarrollo y puesta en producción del módulo integral de líneas de crédito revolventes para personas jurídicas: altas, bloqueos, cancelaciones automáticas/manuales y emisión sobre saldo disponible.}
+        \resumeItem{Optimización del motor de cronogramas personalizados, incorporando modalidades como Cuota Balloon, períodos de gracia y sistemas de amortización francés y alemán para productos de colocación flexible.}
+      \resumeItemListEnd
 
     \resumeSubheading
-		{Banco Alfin}{Lima, Perú}
-		{Especialista de Core Bancario}{Enero 2025 \textbf{--} Actualidad, Full-time, Remoto}
-		\resumeItemListStart
-		\resumeItem{Desarrollo de reportes de cronogramas para flujos de créditos y reportes de garantías asociadas a los mismos, de acuerdo a los productos activos en el sistema bancario.}
-		\resumeItem{Mantenimiento y creación del módulo independiente de líneas revolventes para personas jurídicas. Realizando la creación, bloqueo, cancelación por vencimiento y cancelación manual de líneas además de la generación de créditos a partir del saldo de la línea.}
-		\resumeItem{Mejora de la generación de cronogramas personalizado de la institución, agregando funcionalidades como Cuota Balloon, Periodo de gracia, sistema de amortización Francés y Alemán.}
-		\resumeItemListEnd
-		
+      {SES}{Lima, Perú (Remoto)}
+      {Ingeniero de Software}{Enero 2024 -- Diciembre 2024}
+      \resumeItemListStart
+        \resumeItem{Desarrollo y modernización de servicios internos y paneles administrativos para la orquestación del flujo masivo de pago a proveedores, consumiendo e integrando APIs en GeneXus 8 y Java.}
+        \resumeItem{Construcción y mantenimiento de microservicios con Spring Boot para integración con pasarelas de pago y servicios externos, automatizando pipelines de despliegue continuo con Jenkins.}
+      \resumeItemListEnd
+
     \resumeSubheading
-		{SES}{Lima, Perú}
-		{Ingeniero de Software}{Enero 2024 \textbf{--} Diciembre 2024, Full-time, Remoto}
-		\resumeItemListStart
-		\resumeItem{Desarrollo de servicios internos y paneles para la implementación de flujo de pago de servicios externos consumiendo una API interna en Genexus 8 y Java.}
-		\resumeItem{Desarrollo y mantenimiento de proyectos para el consumo de servicios externos y publicación de microservicios internos utilizando Spring en Java y despliegue con Jenkins.}
-		\resumeItemListEnd
-
-
-	\resumeSubheading
-		{Bantotal}{Arequipa, Perú}
-		{Analista programador}{Marzo 2018 \textbf{--} Diciembre 2023, Full-time}
-		\resumeItemListStart
-		\resumeItem{Análisis y desarrollo de soluciones bancarias para clientes como FORUM(Chile), Compartamos(Perú), Efectiva(Perú), Banco Mundo Mujer(Colombia), BROU(Uruguay) en temas como créditos personales, créditos grupales, cheques, cuentas de ahorro y procesos de cadena de analizar el cdigo genexuse. Usando Genexus 8, Genexus 9, SQL, Java y C\#.}
-		\resumeItem{Diseño y desarrollo de software para la generacón automática de documentación en el formato institucional(.docx) a partir de archivos en formato XPZ(Archivo de distribución de programas en Genexus) en Golang y usando  \href{https://www.antlr.org/}{ANTLR} para analizar el código genexus.}
-		\resumeItem{Desarrollo y optimización base de los módulos de calendario, reglas de negocios(ejecución en interfaz de alto nivel de procesos bancarios), ejecución y distribución de hilos para procesos batch de la versión preliminar de Bantotal 4 usando Genexus 16 y Java.}
-		\resumeItem{Diseño y desarrollo de un módulo de procesamiento de texto en formato parametrizable para el procesamiento por lotes de cuentas, saldos, etc. en la comunicación interbancaria utilizando \href{https://www.antlr.org/}{ANTLR} en Java.}
-		\resumeItem{Diseño y desarrollo de un plugin para Genexus 16 para el análisis por lotes de programas en una Knowledge Base(Agrupación de programas y tablas con una lógica de negocio en común) y la generación de documentación de estos programas en una instalación \href{https://js.wiki/}{Wiki.js} independiente.}
-		\resumeItemListEnd
+      {Bantotal}{Arequipa, Perú}
+      {Analista Programador / Desarrollador Core Bancario}{Marzo 2018 -- Diciembre 2023}
+      \resumeItemListStart
+        \resumeItem{Análisis y desarrollo de soluciones de Core Bancario para entidades financieras de primer nivel en LATAM: FORUM (Chile), Compartamos (Perú), Banco Efectiva (Perú), Banco Mundo Mujer (Colombia) y BROU (Uruguay), en créditos, cheques y ahorros con GeneXus 8/9/16, SQL, Java y C\#.}
+        \resumeItem{Diseño y desarrollo de una herramienta en Golang y \href{https://www.antlr.org/}{ANTLR} para análisis estático de código GeneXus y generación automatizada de documentación técnica corporativa (.docx) desde archivos XPZ.}
+        \resumeItem{Desarrollo y optimización de módulos de calendario financiero, motor de reglas de negocio y distribución de hilos (multithreading) para procesos batch de alta concurrencia en la versión preliminar de Bantotal 4 (GeneXus 16 y Java).}
+        \resumeItem{Implementación de un motor de procesamiento de texto parametrizable con ANTLR en Java para la ejecución y validación por lotes de saldos y cuentas en mensajería interbancaria.}
+        \resumeItem{Desarrollo de un plugin para GeneXus 16 para análisis por lotes de Knowledge Bases (KB) y publicación automática de documentación técnica en \href{https://js.wiki/}{Wiki.js}.}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Centro de Investigación CITESOFT}{Arequipa, Perú}
-      {Asistente de Investigación}{Julio 2016 \textbf{--} Marzo 2018, Part-time}
-        \resumeItemListStart
-            \resumeItem{Estudio e implementación de algoritmos para la segmentación y clasificación de imágenes médicas, tales como SSM, Random Forest, Wavelets y KNN.}
-            \resumeItem{Diseño e implementación de software interactivo para la generación de un Gold Standard dirigido a la segmentación de imágenes médicas en Java.}
-            \resumeItem{Diseño e implementación de software en línea de comandos para la clasificación de imágenes médicas en formato DICOM(radiografías) de acuerdo a la zona del cuerpo en C++.}
-        \resumeItemListEnd
-
-        
-
-          \resumeSubheading
-      {Red Social Universitaria Uconecta}{Arequipa, Perú}
-      {Practicante Ingeniería de Sistemas / Programador}{Marzo 2013 \textbf{--} Marzo 2015, Part-time}
+      {Asistente de Investigación}{Julio 2016 -- Marzo 2018}
       \resumeItemListStart
-      \resumeItem{Se hizo un análisis de la interfaz de la página, proponiendo cambios especficos siguiendo lineamientos de usabilidad, diseño y experiencia de usuario. Se implementó la propuesta utilizando CSS, HTML y PHP, según los lineamientos del framework Drupal.}
-      \resumeItem{Se investigó y usó el framework Drupal para el desarrollo de módulos de interacción entre usuarios, tales como reacciones y comentarios en posts para la red social. Se desarrollo el módulo de comunicación con el API de Facebook.com para la autenticación y compartir la página de la red social entre sus amigos de Facebook.}
-      \resumeItemListEnd  
-     
-    
+        \resumeItem{Investigación e implementación de algoritmos para segmentación y clasificación de radiografías médicas DICOM en C++ y Java, empleando técnicas de SSM, Random Forest, Wavelets y KNN.}
+        \resumeItem{Diseño y desarrollo de la herramienta interactiva de escritorio «Gold Standard Maker (GSM)» para la generación y validación de estándares de oro en segmentación médica (con Registro de Derechos de Autor en Indecopi).}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Red Social Universitaria Uconecta}{Arequipa, Perú}
+      {Practicante de Ingeniería de Sistemas / Programador}{Marzo 2013 -- Marzo 2015}
+      \resumeItemListStart
+        \resumeItem{Análisis y rediseño de interfaz de usuario con enfoque UX/UI en Drupal (HTML, CSS, PHP); desarrollo de módulos sociales interactivos e integración con la API de Facebook.}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
+%----------- PREMIOS & LOGROS -----------
 
-
-%----------- AWARDS & ACHIEVEMENTS -----------
-
-\section{Premios \& Logros}
-  \vspace{2pt}
+\section{Premios \& Reconocimientos}
+  \vspace{0.5pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Uconecta:}{ Equipo ganador con Uconecta en la competencia “Emprendedores Innovadores” de Innóvate Perú, StartUp Perú (2015).} \\ \vspace{3pt}
-        \textbf{Quinty:}{ Equipo ganador con Qinty(juego turístico) en la competencia “Hackaton Arequipa” desarrollado en la Incubadora de Negocios KAMAN (2018).} \\ \vspace{3pt}
-        \textbf{Gold Standard Maker:}{ Obtención de Derechos de Autor sobre el aplicativo “Gold Standard Maker (GSM)” (2018).} \\ \vspace{3pt}
-        \textbf{Bantotal document:}{ Tercer lugar en la competencia "Hackaton Bantotal" con el aplicativo Bantotal Document para la documentación automática de programas escritos en Genexus.} \\ \vspace{3pt}
+        \textbf{Hackatón Bantotal:} Tercer puesto por el software «Bantotal Document» para análisis y documentación de código GeneXus. \\ \vspace{1.2pt}
+        \textbf{Registro de Derechos de Autor (Indecopi, 2018):} Registro de propiedad intelectual sobre el aplicativo médico «Gold Standard Maker (GSM)». \\ \vspace{1.2pt}
+        \textbf{Hackatón Arequipa (Incubadora KAMAN, 2018):} Primer puesto con el videojuego móvil interactivo de turismo «Qinty». \\ \vspace{1.2pt}
+        \textbf{StartUp Perú / Innóvate Perú (2015):} Ganador de capital semilla en «Emprendedores Innovadores» con el proyecto «Uconecta».
     }}
   \resumeSubHeadingListEnd
-  
-  
-  
-  
-  %----------- EDUCATION -----------
-  
-  \section{Educación}
-  \vspace{3pt}
+
+%----------- EDUCACIÓN -----------
+
+\section{Educación}
+  \vspace{0.5pt}
   \resumeSubHeadingListStart
-  \resumeEducationHeading
-  {Universidad Nacional de San Agustín}{Arequipa, Perú}
-  {Ingeniería de Sistemas;  \textbf{Quinto superior} \textbf{GPA: 14.52/20.00}}{Marzo 2013 \textbf{--} Diciembre 2018}
-  {}{}
+    \resumeSubheading
+      {Universidad Nacional de San Agustín (UNSA)}{Arequipa, Perú}
+      {Bachiller en Ingeniería de Sistemas -- Quinto Superior (Promedio ponderado: 14.52/20.00)}{Marzo 2013 -- Diciembre 2018}
   \resumeSubHeadingListEnd
-  
-  
 
-\iffalse % LONG COMMENT
-
-%----------- PROJECTS -----------
-
-\section{Projects}
-    \vspace{3pt}
-    \resumeSubHeadingListStart
-      
-      \resumeProjectHeading
-        {\textbf{Filters and Fractals} $|$ \emph{\href{https://github.com/arasgungore/filters-and-fractals}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A C project which implements a variety of image processing operations that manipulate the size, filter, brightness, contrast, saturation, and other properties of PPM images from scratch and recursive fractal generation functions to model popular fractals including Mandelbrot set, Julia set, Koch curve, Barnsley fern, and Sierpinski triangle.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{Chess Bot} $|$ \emph{\href{https://github.com/arasgungore/chess-bot}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{A C++ project in which you can play chess against an AI with a specified decision tree depth that uses alpha-beta pruning algorithm to predict the optimal move. Aside from basic moves, this mini chess engine also implements chess rules such as castling, en passant, fifty-move rule, threefold repetition, and pawn promotion.}
-          \resumeItemListEnd
-      
-      \resumeProjectHeading
-        {\textbf{DS\&A Projects} $|$ \emph{\href{https://github.com/arasgungore/CMPE250-projects}{\color{blue}GitHub}}}{}
-          \resumeItemListStart
-            \resumeItem{Five Java projects that apply DS\&A concepts such as discrete-event simulation using priority queues, Dijkstra's shortest path algorithm, Prim's algorithm to find the minimum spanning tree, Dinic's algorithm for maximum flow problems, and weighted job scheduling with dynamic programming to real-world problems.}
-          \resumeItemListEnd
-      
-    \resumeSubHeadingListEnd
-
-\fi
-
-
-%----------- CERTIFICATES -----------
-
-% \section{Certificates}
-  % \resumeSubHeadingListStart
-    
-    % \resumeOrganizationHeading
-      % {Procter \& Gamble VIA Certificate Program}{Feb 2022}{Project Management and Personal Productivity}
-    
-  % \resumeSubHeadingListEnd
-
-
-
-
-
-
-%-------------------------------------------
 \end{document}
